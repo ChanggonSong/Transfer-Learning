@@ -60,6 +60,56 @@ yolo val \
   data=clothes_dataset/data.yaml \
   split=test
 
+🔹 2.1.5 Batch-wise Prediction vs Ground Truth (Visual Analysis)
+To complement numerical evaluation, we visualized prediction results for randomly sampled training and validation batches:
+
+Figure 2.1.5a: train_batch0.jpg to train_batch21062.jpg show ground truth annotations in the training set.
+
+Figure 2.1.5b: val_batch0_labels.jpg, val_batch1_labels.jpg, val_batch2_labels.jpg show validation ground truth labels.
+
+Figure 2.1.5c: val_batch0_pred.jpg, val_batch1_pred.jpg, val_batch2_pred.jpg display model predictions for the same validation samples.
+
+Key Observations:
+
+The model shows consistent performance across batches, especially for frequent classes like shortpants, skirt, and cottonpants.
+
+Confidence scores are generally high, often exceeding 0.85 for clean, well-lit samples (e.g., shortsleeve: 0.93, blazer: 0.97).
+
+Lower performance is observed on rare or visually similar categories (e.g., zipup, padding), aligning with class imbalance insights.
+
+🔹 2.1.6 False Positive / False Negative Examples (Qualitative Errors)
+We additionally analyzed ff2dbe3f-bf0a-4bbc-b704-21ad9ca3ea46.jpg to identify qualitative errors:
+
+False Positives: Some predictions identified garments that were not labeled in the ground truth, often due to ambiguous occlusions or complex garment overlaps (e.g., skirt misclassified as shortpants).
+
+False Negatives: In a few cases, true garments were missed, particularly when darker clothing blended into the background or partially occluded (e.g., hoodie under jacket).
+
+These examples demonstrate the need for:
+
+Tuning the confidence threshold,
+
+Post-processing steps like non-maximum suppression adjustment, or
+
+Introducing context-aware modules for better fine-grained apparel detection.
+
+🔹 2.1.7 Label-Prediction Match Consistency
+To assess localization and semantic agreement, we directly compared ground truth and predicted labels:
+
+val_batch0_labels.jpg to val_batch2_labels.jpg vs. val_batch0_pred.jpg to val_batch2_pred.jpg.
+
+Findings:
+
+High bounding box alignment was observed (visually consistent IOU), confirming strong spatial learning.
+
+However, semantic confusion occurred among similar garments:
+
+Cardigan ↔ Jacket
+
+Slacks ↔ Cottonpants
+
+This highlights the importance of consistent labeling and perhaps the need for hierarchical class grouping during training.
+
+
 
 ## 🖼 Inference
 yolo predict \
