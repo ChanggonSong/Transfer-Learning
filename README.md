@@ -137,6 +137,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.5c: val_batch0_pred.jpg, val_batch1_pred.jpg, val_batch2_pred.jpg display model predictions for the same validation samples.
 
 
+
 &nbsp;&nbsp;Key Observations:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• The model shows consistent performance across batches, especially for frequent classes like shortpants, skirt, and cottonpants.
@@ -146,7 +147,8 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;• Rare classes like zipup or padding show lower prediction confidence and are occasionally confused with visually similar categories, reflecting the class imbalance noted in the training distribution.
 
 
-#### 🔹 False Positive / False Negative Examples (Qualitative Errors)  
+#### 🔹 False Positive / False Negative Examples (Qualitative Errors)
+
 &nbsp;&nbsp;The added figure (ff2dbe3f-bf0a-4bbc-b704-21ad9ca3ea46.jpg) demonstrates common misclassification patterns:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• False Positives: Bounding boxes predicted for garments not present in ground truth, often caused by overlapping or ambiguous clothing views (e.g., shortpants vs. skirt).
