@@ -209,6 +209,7 @@ To test the trained model in real time using your laptop's webcam:
   3. Usage
 
 &nbsp;&nbsp;&nbsp;&nbsp;- A window will open showing your webcam feed with real-time bounding boxes and class labels.
+
 &nbsp;&nbsp;&nbsp;&nbsp;- Press q to close the window and stop the program.
 
 Note:
