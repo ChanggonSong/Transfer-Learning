@@ -60,13 +60,12 @@ yolo val \
   data=clothes_dataset/data.yaml \
   split=test
 
-🔹 Evaluation Results
+#### 🔹 Evaluation Results
 
-  The trained model was evaluated using a combination of quantitative metrics and visual analysis.
-  
+  The trained model was evaluated using a combination of quantitative metrics and visual analysis.  
   This section summarizes the key outcomes from the evaluation phase.
 
-🔹 Confusion Matrix Analysis
+#### 🔹 Confusion Matrix Analysis
   
   To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
 
