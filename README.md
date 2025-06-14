@@ -64,7 +64,7 @@ yolo val \
 &nbsp;&nbsp;The trained model was evaluated using a combination of quantitative metrics and visual analysis.
 
 &nbsp;&nbsp;This section summarizes the key outcomes from the evaluation phase.
-<br>
+<br><br>
 ### 🔹 Confusion Matrix Analysis
 
 #### &nbsp;&nbsp;To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
@@ -78,7 +78,7 @@ Image 1 – Confusion Matrix (absolute counts)
 
 
 Image 2 – Normalized Confusion Matrix (proportions)
-<br>
+<br><br>
 ### 🔹 Confidence-Based Metric Curves
 
 #### &nbsp;&nbsp;Confidence-based evaluation curves were plotted to understand how the model behaves across different confidence thresholds:
