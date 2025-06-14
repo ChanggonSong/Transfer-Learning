@@ -207,10 +207,12 @@ To test the trained model in real time using your laptop's webcam:
     python run_yolov11_webcam.py
     
   3. Usage
+
     - A window will open showing your webcam feed with real-time bounding boxes and class labels.
     - Press q to close the window and stop the program.
 
 Note:
+
   - The webcam index (0) is set for the default laptop camera. Change it to 1 or another index if you use an external camera.
   - Make sure the model weights path in the script matches your actual file location.
 
