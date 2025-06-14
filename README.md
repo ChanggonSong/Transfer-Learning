@@ -70,10 +70,8 @@ This section summarizes the key outcomes from the evaluation phase.
 
 To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
 
-&nbsp;&nbsp;&nbsp;&nbsp;• Most predictions align well along the diagonal, indicating strong classification accuracy.
-
-&nbsp;&nbsp;&nbsp;&nbsp;• High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.
-
+&nbsp;&nbsp;&nbsp;&nbsp;• Most predictions align well along the diagonal, indicating strong classification accuracy.  
+&nbsp;&nbsp;&nbsp;&nbsp;• High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.  
 &nbsp;&nbsp;&nbsp;&nbsp;• Some confusion was noted among visually similar categories, such as jacket, cardigan, sweater, and longsleeve.
 
     
