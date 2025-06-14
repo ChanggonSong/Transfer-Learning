@@ -68,7 +68,7 @@ yolo val \
 
 #### 🔹 Confusion Matrix Analysis
 
-&nbsp;&nbsp;To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
+##### &nbsp;&nbsp;To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Most predictions align well along the diagonal, indicating strong classification accuracy.  
 &nbsp;&nbsp;&nbsp;&nbsp;• High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.  
