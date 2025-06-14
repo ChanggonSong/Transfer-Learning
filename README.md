@@ -65,17 +65,15 @@ yolo val \
     This section summarizes the key outcomes from the evaluation phase.
 
 #### 🔹 Confusion Matrix Analysis
-  
-  To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
-
-    • Most predictions align well along the diagonal, indicating strong classification accuracy.
+    To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
+    • Most predictions align well along the diagonal, indicating strong classification accuracy.
     • High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.
     • Some confusion was noted among visually similar categories, such as jacket, cardigan, sweater, and longsleeve.
 
     Image 1 – Confusion Matrix (absolute counts)
     Image 2 – Normalized Confusion Matrix (proportions)
 
-🔹 Confidence-Based Metric Curves  
+#### 🔹 Confidence-Based Metric Curves  
   Confidence-based evaluation curves were plotted to understand how the model behaves across different confidence thresholds:
 
     • Most classes show stable precision and recall in the confidence range of 0.7–0.9.
@@ -87,7 +85,7 @@ yolo val \
     Image 5 – Recall vs. Confidence Curve
     Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 
-🔹 Label Distribution and Bounding Box Analysis  
+#### 🔹 Label Distribution and Bounding Box Analysis  
   We also analyzed the label frequency distribution and spatial characteristics of bounding boxes:
 
     • denimpants, shortpants, and shortsleeve appeared frequently in the dataset, which correlates with their strong detection performance.
@@ -96,24 +94,25 @@ yolo val \
     Image 7 – Class frequency histogram + bbox heatmaps (x/y/width/height)
     Image 8 – Bounding box correlation plots (Correlogram)
 
-🔹 Summary of Model Performance
+#### 🔹 Summary of Model Performance
     • The model achieved a mean Average Precision (mAP@0.5) of 0.744 across all classes.
     • shortpants, shortsleeve, and skirt demonstrated the most robust performance, suggesting practical application potential.
     • Confusion among jacket-type garments suggests future improvements could involve fine-grained loss functions or more specialized model architectures.
 
-🔹 Batch-wise Prediction vs Ground Truth (Visual Analysis)  
+#### 🔹 Batch-wise Prediction vs Ground Truth (Visual Analysis)  
   To complement numerical evaluation, we visualized prediction results for randomly sampled training and validation batches:
-
-    Figure 2.1.5a: train_batch0.jpg to train_batch21062.jpg show ground truth annotations in the training set.
+  
+    Figure 2.1.5a: train_batch0.jpg to train_batch21062.jpg show ground truth annotations in the training set.
     Figure 2.1.5b: val_batch0_labels.jpg, val_batch1_labels.jpg, val_batch2_labels.jpg show validation ground truth labels.
     Figure 2.1.5c: val_batch0_pred.jpg, val_batch1_pred.jpg, val_batch2_pred.jpg display model predictions for the same validation samples.
 
-  Key Observations:
-    • The model shows consistent performance across batches, especially for frequent classes like shortpants, skirt, and cottonpants.
+  Key Observations:  
+  
+    • The model shows consistent performance across batches, especially for frequent classes like shortpants, skirt, and cottonpants.
     • Confidence scores are generally high, often exceeding 0.85 for clean, well-lit samples (e.g., shortsleeve: 0.93, blazer: 0.97).
     • Rare classes like zipup or padding show lower prediction confidence and are occasionally confused with visually similar categories, reflecting the class imbalance noted in the training distribution.
 
-🔹 False Positive / False Negative Examples (Qualitative Errors)  
+#### 🔹 False Positive / False Negative Examples (Qualitative Errors)  
   The added figure (ff2dbe3f-bf0a-4bbc-b704-21ad9ca3ea46.jpg) demonstrates common misclassification patterns:
 
     • False Positives: Bounding boxes predicted for garments not present in ground truth, often caused by overlapping or ambiguous clothing views (e.g., shortpants vs. skirt).
@@ -121,14 +120,14 @@ yolo val \
 
     This analysis suggests the need for improved post-processing and better threshold tuning in deployment.
 
-🔹 Label-Prediction Match Consistency  
+#### 🔹 Label-Prediction Match Consistency  
   A side-by-side review of val_batch*_labels.jpg and val_batch*_pred.jpg showed:
 
     • High spatial consistency in predicted bounding boxes (visually aligned with ground truth).
     • Moderate confusion between semantically similar categories like cardigan vs. jacket, and slacks vs. cottonpants.
     • Emphasizes the need for consistent annotation guidelines when dealing with fine-grained apparel classes.
 
-🔹 Overall Evaluation Summary  
+#### 🔹 Overall Evaluation Summary  
   The combination of quantitative and qualitative evaluation suggests the YOLO-based clothing detection model is effective across most categories.
 
     Strengths:
