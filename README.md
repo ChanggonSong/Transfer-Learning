@@ -8,7 +8,7 @@ This project applies **transfer learning** on the YOLOv11 (Ultralytics YOLOv8-co
 
 - **Base Model**: YOLOv11 (`yolov11n.pt`)
 - **Task**: Object detection of fine-grained clothing types
-- **Dataset**: 9,517 images (train: 7,482 / val: 1,016 / test: 1,019)
+- **Dataset**: 9,517 images (train: 7,482 / val: 1,016 / test: 1,019) (https://universe.roboflow.com/deeplearningproject-8g74c/clothes-category)
 - **Classes**: 18 clothing categories (e.g., hoodie, blazer, cardigan, etc.)
 - **Format**: YOLOv5-compatible dataset structure
 - **Tools**: Ultralytics CLI, PyTorch, Roboflow
