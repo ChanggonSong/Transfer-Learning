@@ -45,6 +45,7 @@ names: ['blazer', 'cardigan', 'coat', 'cottonpants', 'denimpants', 'hoodies', 'j
 ---
 
 ## 🚀 Training Command
+```
 yolo train \
   model=yolov11n.pt \
   data=clothes_dataset/data.yaml \
@@ -52,6 +53,7 @@ yolo train \
   imgsz=640 \
   batch=16 \
   name=clothing_yolov11
+```
 
 ---
 
