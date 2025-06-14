@@ -11,7 +11,7 @@ if not cap.isOpened():
 print("Camera opened successfully.")
 print("Start inference loop...")
 
-while True:
+while True: # Real-time detection until key 'q'.
     ret, frame = cap.read()
     if not ret:
         print("Failed to grab frame")
