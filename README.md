@@ -53,6 +53,7 @@ yolo train \
   batch=16 \
   name=clothing_yolov11
 
+---
 
 ## 📈 Evaluation
 yolo val \
@@ -183,7 +184,9 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;• Apply focal loss or class reweighting for imbalance.
     
 &nbsp;&nbsp;&nbsp;&nbsp;• Consider vision-language models (e.g., OWL-ViT, YOLO-World) for open-vocabulary detection.
-<br><br>
+
+---
+
 ## 📷 Real-time Detection by webcam
 To test the trained model in real time using your laptop's webcam:
 
