@@ -136,7 +136,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.5c: val_batch0_pred.jpg, val_batch1_pred.jpg, val_batch2_pred.jpg display model predictions for the same validation samples.
 
-
+<br><br>
 
 &nbsp;&nbsp;Key Observations:
 
