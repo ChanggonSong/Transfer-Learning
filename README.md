@@ -61,9 +61,8 @@ yolo val \
   split=test
 
 #### 🔹 Evaluation Results
-
-  The trained model was evaluated using a combination of quantitative metrics and visual analysis.  
-  This section summarizes the key outcomes from the evaluation phase.
+    The trained model was evaluated using a combination of quantitative metrics and visual analysis.  
+    This section summarizes the key outcomes from the evaluation phase.
 
 #### 🔹 Confusion Matrix Analysis
   
