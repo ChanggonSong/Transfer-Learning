@@ -59,12 +59,12 @@ yolo val \
   model=runs/detect/clothing_yolov11/weights/best.pt \
   data=clothes_dataset/data.yaml \
   split=test
-<br><br>
+<br>
 ### 🔹 Evaluation Results
 &nbsp;&nbsp;The trained model was evaluated using a combination of quantitative metrics and visual analysis.
 
 &nbsp;&nbsp;This section summarizes the key outcomes from the evaluation phase.
-<br><br>
+<br>
 ### 🔹 Confusion Matrix Analysis
 
 #### &nbsp;&nbsp;To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
@@ -78,8 +78,7 @@ Image 1 – Confusion Matrix (absolute counts)
 
 
 Image 2 – Normalized Confusion Matrix (proportions)
-
-<br><br>
+<br>
 ### 🔹 Confidence-Based Metric Curves
 
 #### &nbsp;&nbsp;Confidence-based evaluation curves were plotted to understand how the model behaves across different confidence thresholds:
@@ -99,8 +98,7 @@ Image 5 – Recall vs. Confidence Curve
 
 
 Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
-
-<br><br>
+<br>
 ### 🔹 Label Distribution and Bounding Box Analysis
 
 #### &nbsp;&nbsp;We also analyzed the label frequency distribution and spatial characteristics of bounding boxes:
@@ -112,8 +110,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
     Image 7 – Class frequency histogram + bbox heatmaps (x/y/width/height)
 
     Image 8 – Bounding box correlation plots (Correlogram)
-    
-<br><br>
+<br>
 ### 🔹 Summary of Model Performance
 
 &nbsp;&nbsp;&nbsp;&nbsp;• The model achieved a mean Average Precision (mAP@0.5) of 0.744 across all classes.  
@@ -138,7 +135,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;• Confidence scores are generally high, often exceeding 0.85 for clean, well-lit samples (e.g., shortsleeve: 0.93, blazer: 0.97).
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Rare classes like zipup or padding show lower prediction confidence and are occasionally confused with visually similar categories, reflecting the class imbalance noted in the training distribution.
-<br><br>
+<br>
 ### 🔹 False Positive / False Negative Examples (Qualitative Errors)
 
 #### &nbsp;&nbsp;The added figure (ff2dbe3f-bf0a-4bbc-b704-21ad9ca3ea46.jpg) demonstrates common misclassification patterns:
@@ -148,7 +145,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;• False Negatives: Some garments annotated in the ground truth were completely missed — especially darker or partially occluded items (e.g., hoodie under jacket).
 
 &nbsp;&nbsp;This analysis suggests the need for improved post-processing and better threshold tuning in deployment.
-<br><br>
+<br>
 ### 🔹 Label-Prediction Match Consistency
 
 #### &nbsp;&nbsp;A side-by-side review of val_batch*_labels.jpg and val_batch*_pred.jpg showed:
