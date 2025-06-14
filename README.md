@@ -61,23 +61,25 @@ yolo val \
   split=test
 
 #### 🔹 Evaluation Results
-    The trained model was evaluated using a combination of quantitative metrics and visual analysis.
+The trained model was evaluated using a combination of quantitative metrics and visual analysis.
 
-    This section summarizes the key outcomes from the evaluation phase.
+This section summarizes the key outcomes from the evaluation phase.
 
 
 #### 🔹 Confusion Matrix Analysis
 
 To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
 
-    • Most predictions align well along the diagonal, indicating strong classification accuracy.
-    • High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.
-    • Some confusion was noted among visually similar categories, such as jacket, cardigan, sweater, and longsleeve.
+&nbsp;&nbsp;&nbsp;&nbsp;• Most predictions align well along the diagonal, indicating strong classification accuracy.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Some confusion was noted among visually similar categories, such as jacket, cardigan, sweater, and longsleeve.
 
     
-    Image 1 – Confusion Matrix (absolute counts)
+Image 1 – Confusion Matrix (absolute counts)
     
-    Image 2 – Normalized Confusion Matrix (proportions)
+Image 2 – Normalized Confusion Matrix (proportions)
     
 
 #### 🔹 Confidence-Based Metric Curves
