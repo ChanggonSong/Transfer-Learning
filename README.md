@@ -116,16 +116,13 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 
     
     Image 8 – Bounding box correlation plots (Correlogram)
-
-
-
+<br>
 #### 🔹 Summary of Model Performance
 
 &nbsp;&nbsp;&nbsp;&nbsp;• The model achieved a mean Average Precision (mAP@0.5) of 0.744 across all classes.  
 &nbsp;&nbsp;&nbsp;&nbsp;• shortpants, shortsleeve, and skirt demonstrated the most robust performance, suggesting practical application potential.  
 &nbsp;&nbsp;&nbsp;&nbsp;• Confusion among jacket-type garments suggests future improvements could involve fine-grained loss functions or more specialized model architectures.
-
-
+<br>
 #### 🔹 Batch-wise Prediction vs Ground Truth (Visual Analysis)
 
 &nbsp;&nbsp;To complement numerical evaluation, we visualized prediction results for randomly sampled training and validation batches:
@@ -136,8 +133,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 
 &nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.5c: val_batch0_pred.jpg, val_batch1_pred.jpg, val_batch2_pred.jpg display model predictions for the same validation samples.
 
-<br><br>
-
+<br>
 &nbsp;&nbsp;Key Observations:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• The model shows consistent performance across batches, especially for frequent classes like shortpants, skirt, and cottonpants.
@@ -145,8 +141,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;• Confidence scores are generally high, often exceeding 0.85 for clean, well-lit samples (e.g., shortsleeve: 0.93, blazer: 0.97).
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Rare classes like zipup or padding show lower prediction confidence and are occasionally confused with visually similar categories, reflecting the class imbalance noted in the training distribution.
-
-
+<br>
 #### 🔹 False Positive / False Negative Examples (Qualitative Errors)
 
 &nbsp;&nbsp;The added figure (ff2dbe3f-bf0a-4bbc-b704-21ad9ca3ea46.jpg) demonstrates common misclassification patterns:
@@ -156,8 +151,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;• False Negatives: Some garments annotated in the ground truth were completely missed — especially darker or partially occluded items (e.g., hoodie under jacket).
 
 &nbsp;&nbsp;&nbsp;&nbsp;This analysis suggests the need for improved post-processing and better threshold tuning in deployment.
-
-
+<br>
 #### 🔹 Label-Prediction Match Consistency
 
 &nbsp;&nbsp;A side-by-side review of val_batch*_labels.jpg and val_batch*_pred.jpg showed:
@@ -167,8 +161,7 @@ Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
 &nbsp;&nbsp;&nbsp;&nbsp;• Moderate confusion between semantically similar categories like cardigan vs. jacket, and slacks vs. cottonpants.
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Emphasizes the need for consistent annotation guidelines when dealing with fine-grained apparel classes.
-
-
+<br>
 #### 🔹 Overall Evaluation Summary
 
 &nbsp;&nbsp;The combination of quantitative and qualitative evaluation suggests the YOLO-based clothing detection model is effective across most categories.
