@@ -61,14 +61,14 @@ yolo val \
   split=test
 
 #### 🔹 Evaluation Results
-The trained model was evaluated using a combination of quantitative metrics and visual analysis.
+&nbsp;&nbsp;The trained model was evaluated using a combination of quantitative metrics and visual analysis.
 
-This section summarizes the key outcomes from the evaluation phase.
+&nbsp;&nbsp;This section summarizes the key outcomes from the evaluation phase.
 
 
 #### 🔹 Confusion Matrix Analysis
 
-To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
+&nbsp;&nbsp;To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
 
 &nbsp;&nbsp;&nbsp;&nbsp;• Most predictions align well along the diagonal, indicating strong classification accuracy.  
 &nbsp;&nbsp;&nbsp;&nbsp;• High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.  
@@ -76,115 +76,124 @@ To evaluate inter-class confusion, both the absolute and normalized confusion ma
 
     
 Image 1 – Confusion Matrix (absolute counts)
-    
+
+
 Image 2 – Normalized Confusion Matrix (proportions)
-    
+
+
 
 #### 🔹 Confidence-Based Metric Curves
 
-  Confidence-based evaluation curves were plotted to understand how the model behaves across different confidence thresholds:
-    • Most classes show stable precision and recall in the confidence range of 0.7–0.9.  
-    • shortsleeve and shortpants achieved exceptionally high scores across all confidence levels.  
-    • On the other hand, zipup showed lower performance, likely due to visual overlap with similar items and data scarcity.
+&nbsp;&nbsp;Confidence-based evaluation curves were plotted to understand how the model behaves across different confidence thresholds:
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Most classes show stable precision and recall in the confidence range of 0.7–0.9.  
+&nbsp;&nbsp;&nbsp;&nbsp;• shortsleeve and shortpants achieved exceptionally high scores across all confidence levels.  
+&nbsp;&nbsp;&nbsp;&nbsp;• On the other hand, zipup showed lower performance, likely due to visual overlap with similar items and data scarcity.
 
 
-    Image 3 – Precision vs. Confidence Curve
-    
-    Image 4 – F1 Score vs. Confidence Curve
-    
-    Image 5 – Recall vs. Confidence Curve
-    
-    Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
-    
+Image 3 – Precision vs. Confidence Curve
+
+
+Image 4 – F1 Score vs. Confidence Curve
+
+
+Image 5 – Recall vs. Confidence Curve
+
+
+Image 6 – Precision-Recall Curve + mAP@0.5 (0.744)
+
+
 
 #### 🔹 Label Distribution and Bounding Box Analysis
 
-  We also analyzed the label frequency distribution and spatial characteristics of bounding boxes:
-
-    • denimpants, shortpants, and shortsleeve appeared frequently in the dataset, which correlates with their strong detection performance.  
-    • Bounding boxes are densely centered in the image frame, and their size distribution shows a healthy variety, reducing risk of spatial bias.
+&nbsp;&nbsp;We also analyzed the label frequency distribution and spatial characteristics of bounding boxes:
+  
+&nbsp;&nbsp;&nbsp;&nbsp;• denimpants, shortpants, and shortsleeve appeared frequently in the dataset, which correlates with their strong detection performance.  
+&nbsp;&nbsp;&nbsp;&nbsp;• Bounding boxes are densely centered in the image frame, and their size distribution shows a healthy variety, reducing risk of spatial bias.
 
 
     Image 7 – Class frequency histogram + bbox heatmaps (x/y/width/height)
+
     
     Image 8 – Bounding box correlation plots (Correlogram)
 
 
+
 #### 🔹 Summary of Model Performance
 
-    • The model achieved a mean Average Precision (mAP@0.5) of 0.744 across all classes.  
-    • shortpants, shortsleeve, and skirt demonstrated the most robust performance, suggesting practical application potential.  
-    • Confusion among jacket-type garments suggests future improvements could involve fine-grained loss functions or more specialized model architectures.
+&nbsp;&nbsp;&nbsp;&nbsp;• The model achieved a mean Average Precision (mAP@0.5) of 0.744 across all classes.  
+&nbsp;&nbsp;&nbsp;&nbsp;• shortpants, shortsleeve, and skirt demonstrated the most robust performance, suggesting practical application potential.  
+&nbsp;&nbsp;&nbsp;&nbsp;• Confusion among jacket-type garments suggests future improvements could involve fine-grained loss functions or more specialized model architectures.
 
 
 #### 🔹 Batch-wise Prediction vs Ground Truth (Visual Analysis)
 
-  To complement numerical evaluation, we visualized prediction results for randomly sampled training and validation batches:
+&nbsp;&nbsp;To complement numerical evaluation, we visualized prediction results for randomly sampled training and validation batches:
   
-    Figure 2.1.5a: train_batch0.jpg to train_batch21062.jpg show ground truth annotations in the training set.
-    
-    Figure 2.1.5b: val_batch0_labels.jpg, val_batch1_labels.jpg, val_batch2_labels.jpg show validation ground truth labels.
-    
-    Figure 2.1.5c: val_batch0_pred.jpg, val_batch1_pred.jpg, val_batch2_pred.jpg display model predictions for the same validation samples.
+&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.5a: train_batch0.jpg to train_batch21062.jpg show ground truth annotations in the training set.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.5b: val_batch0_labels.jpg, val_batch1_labels.jpg, val_batch2_labels.jpg show validation ground truth labels.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Figure 2.1.5c: val_batch0_pred.jpg, val_batch1_pred.jpg, val_batch2_pred.jpg display model predictions for the same validation samples.
 
 
-  Key Observations:
-  
-    • The model shows consistent performance across batches, especially for frequent classes like shortpants, skirt, and cottonpants.
-    
-    • Confidence scores are generally high, often exceeding 0.85 for clean, well-lit samples (e.g., shortsleeve: 0.93, blazer: 0.97).
-    
-    • Rare classes like zipup or padding show lower prediction confidence and are occasionally confused with visually similar categories, reflecting the class imbalance noted in the training distribution.
+&nbsp;&nbsp;Key Observations:
+
+&nbsp;&nbsp;&nbsp;&nbsp;• The model shows consistent performance across batches, especially for frequent classes like shortpants, skirt, and cottonpants.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Confidence scores are generally high, often exceeding 0.85 for clean, well-lit samples (e.g., shortsleeve: 0.93, blazer: 0.97).
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Rare classes like zipup or padding show lower prediction confidence and are occasionally confused with visually similar categories, reflecting the class imbalance noted in the training distribution.
 
 
 #### 🔹 False Positive / False Negative Examples (Qualitative Errors)  
-  The added figure (ff2dbe3f-bf0a-4bbc-b704-21ad9ca3ea46.jpg) demonstrates common misclassification patterns:
-  
-    • False Positives: Bounding boxes predicted for garments not present in ground truth, often caused by overlapping or ambiguous clothing views (e.g., shortpants vs. skirt).  
-    
-    • False Negatives: Some garments annotated in the ground truth were completely missed — especially darker or partially occluded items (e.g., hoodie under jacket).
+&nbsp;&nbsp;The added figure (ff2dbe3f-bf0a-4bbc-b704-21ad9ca3ea46.jpg) demonstrates common misclassification patterns:
 
-    This analysis suggests the need for improved post-processing and better threshold tuning in deployment.
+&nbsp;&nbsp;&nbsp;&nbsp;• False Positives: Bounding boxes predicted for garments not present in ground truth, often caused by overlapping or ambiguous clothing views (e.g., shortpants vs. skirt).
+
+&nbsp;&nbsp;&nbsp;&nbsp;• False Negatives: Some garments annotated in the ground truth were completely missed — especially darker or partially occluded items (e.g., hoodie under jacket).
+
+&nbsp;&nbsp;&nbsp;&nbsp;This analysis suggests the need for improved post-processing and better threshold tuning in deployment.
 
 
 #### 🔹 Label-Prediction Match Consistency
 
-  A side-by-side review of val_batch*_labels.jpg and val_batch*_pred.jpg showed:
+&nbsp;&nbsp;A side-by-side review of val_batch*_labels.jpg and val_batch*_pred.jpg showed:
 
-    • High spatial consistency in predicted bounding boxes (visually aligned with ground truth).
-    
-    • Moderate confusion between semantically similar categories like cardigan vs. jacket, and slacks vs. cottonpants.
-    
-    • Emphasizes the need for consistent annotation guidelines when dealing with fine-grained apparel classes.
+&nbsp;&nbsp;&nbsp;&nbsp;• High spatial consistency in predicted bounding boxes (visually aligned with ground truth).
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Moderate confusion between semantically similar categories like cardigan vs. jacket, and slacks vs. cottonpants.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Emphasizes the need for consistent annotation guidelines when dealing with fine-grained apparel classes.
 
 
 #### 🔹 Overall Evaluation Summary
 
-The combination of quantitative and qualitative evaluation suggests the YOLO-based clothing detection model is effective across most categories.
+&nbsp;&nbsp;The combination of quantitative and qualitative evaluation suggests the YOLO-based clothing detection model is effective across most categories.
 
-  Strengths:
+&nbsp;&nbsp;Strengths:
 
-    • Strong generalization in diverse images (pose, lighting, occlusion).
+&nbsp;&nbsp;&nbsp;&nbsp;• Strong generalization in diverse images (pose, lighting, occlusion).
+
+&nbsp;&nbsp;&nbsp;&nbsp;• mAP@0.5 = 0.744 with especially high scores on shortsleeve, shortpants, and skirt.
+
+&nbsp;&nbsp;&nbsp;&nbsp;• High confidence detection for common classes.
+
+
+&nbsp;&nbsp;Limitations:
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Frequent misclassification between similar garments (e.g., jacket vs. cardigan).
     
-    • mAP@0.5 = 0.744 with especially high scores on shortsleeve, shortpants, and skirt.
+&nbsp;&nbsp;&nbsp;&nbsp;• Weak performance on rare or ambiguous classes like zipup, padding.
+
+
+&nbsp;&nbsp;Recommendations:
+
+&nbsp;&nbsp;&nbsp;&nbsp;• Incorporate fine-grained losses or hierarchical class structures.
     
-    • High confidence detection for common classes.
-
-
-  Limitations:
-
-    • Frequent misclassification between similar garments (e.g., jacket vs. cardigan).
+&nbsp;&nbsp;&nbsp;&nbsp;• Apply focal loss or class reweighting for imbalance.
     
-    • Weak performance on rare or ambiguous classes like zipup, padding.
-
-
-  Recommendations:
-
-    • Incorporate fine-grained losses or hierarchical class structures.
-    
-    • Apply focal loss or class reweighting for imbalance.
-    
-    • Consider vision-language models (e.g., OWL-ViT, YOLO-World) for open-vocabulary detection.
+&nbsp;&nbsp;&nbsp;&nbsp;• Consider vision-language models (e.g., OWL-ViT, YOLO-World) for open-vocabulary detection.
 
 
 ## 📷 Real-time Detection by webcam
