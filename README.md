@@ -71,12 +71,10 @@ yolo val \
 To evaluate inter-class confusion, both the absolute and normalized confusion matrices were analyzed:
 
     • Most predictions align well along the diagonal, indicating strong classification accuracy.
-
     • High accuracy was observed for classes such as shortpants, shortsleeve, and denimpants.
-
     • Some confusion was noted among visually similar categories, such as jacket, cardigan, sweater, and longsleeve.
 
-
+    
     Image 1 – Confusion Matrix (absolute counts)
     
     Image 2 – Normalized Confusion Matrix (proportions)
