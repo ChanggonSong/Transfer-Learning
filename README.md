@@ -197,15 +197,15 @@ To test the trained model in real time using your laptop's webcam:
   1. Install dependencies
     Make sure you have installed all required packages:
 
-    ```
+    
     pip install -r requirements.txt
-    ```
+    
   3. Run the script
     Execute the following command in your terminal:
 
-    ```
+    
     python run_yolov11_webcam.py
-    ```
+    
   3. Usage
     - A window will open showing your webcam feed with real-time bounding boxes and class labels.
     - Press q to close the window and stop the program.
