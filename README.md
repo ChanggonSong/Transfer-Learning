@@ -145,7 +145,7 @@ yolo val \
     • Consider vision-language models (e.g., OWL-ViT, YOLO-World) for open-vocabulary detection.
 
 
-## 📷 Real-time Testing by Webcam
+## 📷 Real-time Detection by webcam
 To test the trained model in real time using your laptop's webcam:
 
 1. Install dependencies
