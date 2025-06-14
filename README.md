@@ -6,3 +6,5 @@ Our task is transfer-learning for clothes detection with YOLOv3.
 1. Model: YOLOv11
    
 2. Dataset: 
+
+## Result
