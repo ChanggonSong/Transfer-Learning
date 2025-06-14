@@ -214,6 +214,7 @@ Note:
 
   - The webcam index (0) is set for the default laptop camera. Change it to 1 or another index if you use an external camera.
   - Make sure the model weights path in the script matches your actual file location.
+  - 'weights_only_head', 'weight' file: both transfer-learned weights.
 
 
 ## 🖼 Inference
