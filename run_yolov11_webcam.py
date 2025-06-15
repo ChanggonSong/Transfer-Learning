@@ -1,7 +1,9 @@
 import cv2
 from ultralytics import YOLO
 
-model = YOLO(r'weights_only_head\best.pt')
+# model = YOLO("yolo11n.pt") # original yolov11
+model = YOLO(r'weights_only_head\best.pt') # transfer-learning (FC layer)
+
 
 cap = cv2.VideoCapture(0) # 0: your default camera
 print("Opening Camera...")
