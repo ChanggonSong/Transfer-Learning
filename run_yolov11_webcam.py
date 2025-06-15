@@ -1,7 +1,7 @@
 import cv2
 from ultralytics import YOLO
 
-model = YOLO(r'head\best.pt')
+model = YOLO(r'weights_only_head\best.pt')
 
 cap = cv2.VideoCapture(0) # 0: your default camera
 print("Opening Camera...")
